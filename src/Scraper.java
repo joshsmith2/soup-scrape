@@ -49,10 +49,21 @@ public class Scraper {
 
     public Document getDocument(){
         Document doc = null;
-        try {
-            doc = Jsoup.connect(this.URLToScrape).get();
-        } catch (IOException ioe) {
-            ioe.printStackTrace();
+        if (this.inputType.equals("file")){
+            File inputFile = new File(this.URLToScrape);
+            try {
+                doc = Jsoup.parse(inputFile, "UTF-8","");
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+        } else if (this.inputType.equals("web")) {
+            try {
+                doc = Jsoup.connect(this.URLToScrape).get();
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+        } else {
+            throw new RuntimeException("No idea how to read a ".concat(this.inputType));
         }
         return doc;
     }
@@ -70,8 +81,6 @@ public class Scraper {
                 if (i == 1) result.add(tds.get(i).text());
             }
         }
-
         return result;
-
     }
 }

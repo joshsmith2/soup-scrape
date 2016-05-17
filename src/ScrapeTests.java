@@ -22,6 +22,11 @@ public class ScrapeTests {
         Scraper testScraper = new Scraper.Builder(testFile).setInputType("file").build();
     }
 
+    @Test(expected=RuntimeException.class)
+    public void checkNetParserFailsWithUnknownFileMode(){
+        Scraper testScraper = new Scraper.Builder(testFile).setInputType("crontug").build();
+    }
+
     @Test
     public void CountMPs(){
         Scraper testScraper = new Scraper.Builder(testFile).setInputType("file").build();
