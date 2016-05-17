@@ -17,15 +17,34 @@ public class Scraper {
 
     private String URLToScrape;
     private Document URLDocument;
+    private String inputType;
 
-    //Set up default arguments
-    public Scraper(String URLEntered){
-        Scraper(URLEntered, "web");
+    public static class Builder{
+        // Required variables
+        private String URLToScrape;
+        // Optional variables
+        private String InputType = "web";
+
+        public Builder(String newURLEntered)
+        {
+            this.URLToScrape = newURLEntered;
+        }
+
+        public Builder setInputType(String type){
+            this.InputType = type;
+            return this;
+        }
+
+        public Scraper build(){
+            return new Scraper(this);
+        }
     }
 
-    public Scraper(String URLEntered, String Type) {
-        URLToScrape = URLEntered;
-        URLDocument = this.getDocument();
+    //Set up default arguments
+    public Scraper(Builder builder){
+        this.URLToScrape = builder.URLToScrape;
+        this.inputType = builder.InputType;
+        this.URLDocument = this.getDocument();
     }
 
     public Document getDocument(){

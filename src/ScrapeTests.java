@@ -14,17 +14,17 @@ public class ScrapeTests {
 
     @Test(expected=IllegalArgumentException.class)
     public void checkNetParserRaisesErrorWithFile(){
-        Scraper testScraper = new Scraper(testFile);
+        Scraper testScraper = new Scraper.Builder(testFile).build();
     }
 
     @Test
     public void checkNetParserWorksInFileMode(){
-        Scraper testScraper = new Scraper(testFile, "file");
+        Scraper testScraper = new Scraper.Builder(testFile).setInputType("file").build();
     }
 
     @Test
     public void CountMPs(){
-        Scraper testScraper = new Scraper(testFile);
+        Scraper testScraper = new Scraper.Builder(testFile).setInputType("file").build();
         assertEquals(numberOfMPs, testScraper.getMPBiogLinks().size());
     }
 }
