@@ -68,19 +68,19 @@ public class Scraper {
         return doc;
     }
 
-    public ArrayList<String> getMPBiogLinks(){
+    public ArrayList<Element> getMPBiogLinks(){
 
         ArrayList<String> result = new ArrayList<String>();
+        ArrayList<Element> MPLinks = new ArrayList<Element>();
 
-        Element table = this.URLDocument.getElementById("datatable");
-        Elements rows = table.getElementsByTag("TR");
+        Element table = this.URLDocument.getElementsByTag("tbody").get(0);
+        Elements MPNames = table.getElementsByTag("td");
 
-        for (Element row : rows) {
-            Elements tds = row.getElementsByTag("TD");
-            for (int i = 0; i < tds.size(); i++) {
-                if (i == 1) result.add(tds.get(i).text());
+        for (Element row : MPNames) {
+            if (row.id().contains("tdNameCellLeft")){
+               MPLinks.add(row.child(0));
             }
         }
-        return result;
+        return MPLinks;
     }
 }

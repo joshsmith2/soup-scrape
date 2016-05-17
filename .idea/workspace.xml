@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f854f5b-d79b-489e-9f40-450cb89d6dcf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ScrapeTests.java" afterPath="$PROJECT_DIR$/src/ScrapeTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scraper.java" afterPath="$PROJECT_DIR$/src/Scraper.java" />
     </list>
     <ignored path="soup-scrape.iws" />
@@ -30,8 +29,8 @@
             <file leaf-file-name="Scraper.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Scraper.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.5688487" vertical-offset="504" max-vertical-offset="1656">
-                    <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+                  <state vertical-scroll-proportion="0.4108352" vertical-offset="770" max-vertical-offset="1656">
+                    <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
                     <folding>
                       <element signature="n#!!doc" expanded="true" />
                       <element signature="imports" expanded="true" />
@@ -39,7 +38,8 @@
                       <element signature="e#814#815#0" expanded="true" />
                       <element signature="e#968#969#0" expanded="true" />
                       <element signature="e#1016#1017#0" expanded="true" />
-                      <element signature="e#2035#2043#0" expanded="true" />
+                      <element signature="e#2036#2044#0" expanded="true" />
+                      <element signature="e#2098#2107#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -96,8 +96,8 @@
       <file leaf-file-name="ScrapeTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ScrapeTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8956661" vertical-offset="0" max-vertical-offset="738">
-              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.66452646" vertical-offset="0" max-vertical-offset="738">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -129,14 +129,14 @@
         <option value="$PROJECT_DIR$/res/test-source-mps.html" />
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/soup-scrape.iml" />
-        <option value="$PROJECT_DIR$/src/Scraper.java" />
         <option value="$PROJECT_DIR$/src/ScrapeTests.java" />
+        <option value="$PROJECT_DIR$/src/Scraper.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="997" />
-    <option name="y" value="22" />
+    <option name="x" value="428" />
+    <option name="y" value="12" />
     <option name="width" value="1286" />
     <option name="height" value="1047" />
   </component>
@@ -487,7 +487,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="997" y="22" width="1286" height="1047" extended-state="0" />
+    <frame x="428" y="12" width="1286" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -560,7 +560,8 @@
             <element signature="e#814#815#0" expanded="true" />
             <element signature="e#968#969#0" expanded="true" />
             <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#2035#2043#0" expanded="true" />
+            <element signature="e#2036#2044#0" expanded="true" />
+            <element signature="e#2098#2107#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -597,7 +598,8 @@
             <element signature="e#814#815#0" expanded="true" />
             <element signature="e#968#969#0" expanded="true" />
             <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#2035#2043#0" expanded="true" />
+            <element signature="e#2036#2044#0" expanded="true" />
+            <element signature="e#2098#2107#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -652,8 +654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScrapeTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8956661" vertical-offset="0" max-vertical-offset="738">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.66452646" vertical-offset="0" max-vertical-offset="738">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -665,8 +667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scraper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5688487" vertical-offset="504" max-vertical-offset="1656">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.4108352" vertical-offset="770" max-vertical-offset="1656">
+          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -674,7 +676,8 @@
             <element signature="e#814#815#0" expanded="true" />
             <element signature="e#968#969#0" expanded="true" />
             <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#2035#2043#0" expanded="true" />
+            <element signature="e#2036#2044#0" expanded="true" />
+            <element signature="e#2098#2107#0" expanded="true" />
           </folding>
         </state>
       </provider>
