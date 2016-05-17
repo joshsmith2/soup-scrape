@@ -10,6 +10,7 @@ import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 
 import java.io.*; // Only needed if scraping a local File.
+import java.net.URL;
 import java.util.ArrayList;
 
 public class Scraper {
@@ -17,7 +18,12 @@ public class Scraper {
     private String URLToScrape;
     private Document URLDocument;
 
-    public Scraper(String URLEntered) {
+    //Set up default arguments
+    public Scraper(String URLEntered){
+        Scraper(URLEntered, "web");
+    }
+
+    public Scraper(String URLEntered, String Type) {
         URLToScrape = URLEntered;
         URLDocument = this.getDocument();
     }
