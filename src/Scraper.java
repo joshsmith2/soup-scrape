@@ -32,7 +32,7 @@ public class Scraper {
         return doc;
     }
 
-    public ArrayList<String> getNumbers(){
+    public ArrayList<String> getMPBiogLinks(){
 
         ArrayList<String> result = new ArrayList<String>();
 

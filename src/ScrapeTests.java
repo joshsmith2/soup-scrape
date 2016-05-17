@@ -10,17 +10,12 @@ import static org.junit.Assert.*;
 
 public class ScrapeTests {
 
+    static String testFile = "res/test-source-mps.html";
+    static int numberOfMPs = 649;
+
     @Test
-    public void smokeTest () {
-        String TestURL = "http://www.geog.leeds.ac.uk/courses/other/programming/practicals/general/web/scraping-intro/table.html";
-
-        Scraper testScraper = new Scraper(TestURL);
-
-        ArrayList<String> expectedArray = new ArrayList<String>();
-        expectedArray.add("2");
-        expectedArray.add("4");
-
-        assertEquals(expectedArray, testScraper.getNumbers());
-
+    public void CountMPs(){
+        Scraper testScraper = new Scraper(testFile);
+        assertEquals(numberOfMPs, testScraper.getMPBiogLinks().size());
     }
 }
