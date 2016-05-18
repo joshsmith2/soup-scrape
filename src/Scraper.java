@@ -5,18 +5,16 @@
  */
 
 import org.jsoup.*;
-import org.jsoup.helper.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.*;
 
 import java.io.*; // Only needed if scraping a local File.
-import java.net.URL;
 import java.util.ArrayList;
 
 public class Scraper {
 
     private String URLToScrape;
-    private Document URLDocument;
+    static Document URLDocument;
     private String inputType;
 
     public static class Builder{
@@ -44,7 +42,7 @@ public class Scraper {
     public Scraper(Builder builder){
         this.URLToScrape = builder.URLToScrape;
         this.inputType = builder.InputType;
-        this.URLDocument = this.getDocument();
+        URLDocument = this.getDocument();
     }
 
     public Document getDocument(){
@@ -68,18 +66,4 @@ public class Scraper {
         return doc;
     }
 
-    public ArrayList<String> getMPBiogLinks(){
-
-        ArrayList<String> MPLinks = new ArrayList<String>();
-
-        Element table = this.URLDocument.getElementsByTag("tbody").get(0);
-        Elements MPNames = table.getElementsByTag("td");
-
-        for (Element row : MPNames) {
-            if (row.id().contains("tdNameCellLeft")){
-               MPLinks.add(row.child(0).attr("href"));
-            }
-        }
-        return MPLinks;
-    }
 }

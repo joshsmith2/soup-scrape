@@ -29,8 +29,11 @@ public class ScrapeTests {
 
     @Test
     public void CountMPsAndCheckFirstLink(){
-        Scraper testScraper = new Scraper.Builder(testFile).setInputType("file").build();
-        ArrayList<String> MPLinks = testScraper.getMPBiogLinks();
+        ParliamentScraper.Builder pBuilder = new ParliamentScraper.Builder(testFile);
+        pBuilder.setInputType("file");
+
+        ParliamentScraper ps = pBuilder.build();
+        ArrayList<String> MPLinks = ps.getMPBiogLinks();
 
         assertEquals(numberOfMPs, MPLinks.size());
         assertEquals(MPLinks.get(0), "http://www.parliament.uk/biographies/commons/ms-diane-abbott/172");
