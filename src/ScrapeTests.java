@@ -11,6 +11,7 @@ public class ScrapeTests {
 
     static String testFile = "res/test-source-mps.html";
     static int numberOfMPs = 649;
+    static String testMPFile = "res/test-source-mps.html";
 
     @Test(expected=IllegalArgumentException.class)
     public void checkNetParserRaisesErrorWithFile(){
@@ -53,4 +54,23 @@ public class ScrapeTests {
         MP updatedMember = memberAssembler.build();
         assertEquals(updatedMember.screenName, newScreenName);
     }
+
+    @Test
+    public void checkKarenBuck(){
+        String theName = "Ms Karen Buck MP";
+        String theConstituency = "Westminster North";
+        String theScreenName = "@karenpbuckmp";
+
+
+        ParliamentScraper.Builder pBuilder = new ParliamentScraper.Builder(testMPFile);
+        pBuilder.setInputType("file");
+        ParliamentScraper pScraper = pBuilder.build();
+
+        MP karen = pScraper.getMPDetails();
+
+        assertEquals(theName, karen.name);
+        assertEquals(theScreenName, karen.screenName);
+        assertEquals(theConstituency, karen.constituency);
+    }
+
 }
