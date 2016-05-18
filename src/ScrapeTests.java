@@ -28,8 +28,11 @@ public class ScrapeTests {
     }
 
     @Test
-    public void CountMPs(){
+    public void CountMPsAndCheckFirstLink(){
         Scraper testScraper = new Scraper.Builder(testFile).setInputType("file").build();
-        assertEquals(numberOfMPs, testScraper.getMPBiogLinks().size());
+        ArrayList<String> MPLinks = testScraper.getMPBiogLinks();
+
+        assertEquals(numberOfMPs, MPLinks.size());
+        assertEquals(MPLinks.get(0), "http://www.parliament.uk/biographies/commons/ms-diane-abbott/172");
     }
 }

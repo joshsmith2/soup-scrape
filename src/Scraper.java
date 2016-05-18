@@ -68,17 +68,16 @@ public class Scraper {
         return doc;
     }
 
-    public ArrayList<Element> getMPBiogLinks(){
+    public ArrayList<String> getMPBiogLinks(){
 
-        ArrayList<String> result = new ArrayList<String>();
-        ArrayList<Element> MPLinks = new ArrayList<Element>();
+        ArrayList<String> MPLinks = new ArrayList<String>();
 
         Element table = this.URLDocument.getElementsByTag("tbody").get(0);
         Elements MPNames = table.getElementsByTag("td");
 
         for (Element row : MPNames) {
             if (row.id().contains("tdNameCellLeft")){
-               MPLinks.add(row.child(0));
+               MPLinks.add(row.child(0).attr("href"));
             }
         }
         return MPLinks;
