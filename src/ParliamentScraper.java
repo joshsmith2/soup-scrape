@@ -28,7 +28,6 @@ public class ParliamentScraper extends Scraper {
     }
 
     public ArrayList<String> getMPBiogLinks(){
-
         ArrayList<String> MPLinks = new ArrayList<String>();
 
         Element table = URLDocument.getElementsByTag("tbody").get(0);

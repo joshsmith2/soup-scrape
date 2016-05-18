@@ -38,4 +38,19 @@ public class ScrapeTests {
         assertEquals(numberOfMPs, MPLinks.size());
         assertEquals(MPLinks.get(0), "http://www.parliament.uk/biographies/commons/ms-diane-abbott/172");
     }
+
+
+    private String name = "Graham Sort";
+    private String constituency = "Buggerwold";
+    private String newScreenName = "CrumpOwl666";
+
+    @Test
+    public void createMP(){
+        MP.Builder memberAssembler = new MP.Builder(name, constituency);
+        MP testMember = memberAssembler.build();
+        assertEquals(testMember.screenName, "");
+        memberAssembler.setScreenName(newScreenName);
+        MP updatedMember = memberAssembler.build();
+        assertEquals(updatedMember.screenName, newScreenName);
+    }
 }

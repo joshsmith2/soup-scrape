@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class Scraper {
 
-    private String URLToScrape;
+    private final String URLToScrape;
     static Document URLDocument;
-    private String inputType;
+    private final String inputType;
 
     public static class Builder{
         // Required variables
