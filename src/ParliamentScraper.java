@@ -41,4 +41,12 @@ public class ParliamentScraper extends Scraper {
         return MPLinks;
     }
 
+    public MP getMPDetails(){
+        final String name;
+        final String constituency;
+        final String screenName;
+
+        MP.Builder memberAssembler = new MP.Builder("Dummy", "Stuffins");
+        return memberAssembler.build();
+    }
 }
